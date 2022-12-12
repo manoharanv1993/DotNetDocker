@@ -17,7 +17,7 @@ variables:
   Azure.ResourceGroupName: 'DockerImagePipeline'
 
   # Update Azure.ServiceConnectionId value with AzureRm service endpoint.
-  Azure.ServiceConnectionId: '{{ uk-dee-dev (dff7d21e-23d3-4456-a345-2f709ed455a0) }}'
+  Azure.ServiceConnectionId: 'uk-dee-dev (dff7d21e-23d3-4456-a345-2f709ed455a0)'
 
   # Update Azure.Location value with Azure Location.
   Azure.Location: 'eastus2'
