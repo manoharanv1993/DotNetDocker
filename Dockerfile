@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:2.1-sdk AS build
+FROM mcr.microsoft.com/dotnet/aspnet:3.1-buster-slim AS build
 WORKDIR /app
 
 # copy csproj and restore as distinct layers
