@@ -14,9 +14,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Build the Docker image
-
-          
   
     - name: Login to Azure Container Registry
       uses: azure/docker-login@v1
@@ -28,5 +25,5 @@ jobs:
  
     - name: Push Docker image to Azure Container Registry
       run: |
-            run: docker build . --file Dockerfile -t dotnetdocker
-                 docker push appdeeacr.azurecr.io/dotnetdocker 
+           docker build . --file Dockerfile -t dotnetdocker
+           docker push appdeeacr.azurecr.io/dotnetdocker 
