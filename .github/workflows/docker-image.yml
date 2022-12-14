@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile-t dotnetdocker
+      run: docker build . --file Dockerfile -t dotnetdocker
            docker tag dotnetdocker appdeeacr.azurecr.io/dotnetdocker
   
     - name: Login to Azure Container Registry
