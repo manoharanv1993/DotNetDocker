@@ -24,9 +24,7 @@ jobs:
           username: appdeeacr
           password: T+KPn2IBXjuQsu3c9iJcVFTe4mco63Vx
 
-    - name: Build Docker image
-      run: docker-compose build
-
+ 
     - name: Push Docker image to Azure Container Registry
       run: |
             docker tag DotNetDocker:latest appdeeacr.azurecr.io/DotNetDocker
