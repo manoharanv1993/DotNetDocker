@@ -27,4 +27,4 @@ jobs:
  
     - name: Push Docker image to Azure Container Registry
       run: |
-           docker push appdeeacr.azurecr.io/dotnetdocker 
+           docker push appdeeacr.azurecr.io 
