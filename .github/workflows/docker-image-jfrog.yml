@@ -18,9 +18,9 @@ jobs:
     - name: Login to JFrog Container Registry
       uses: docker/login-action@v1
       with:
-          registry: https://useast.jfrog.lexisnexisrisk.com
-          username: manoharanv@b2b.regn.net
-          password: Digi"123
+          registry: registry-1.docker.io
+          username: usernamedocker
+          password: Welcome@123
 
  
     - name: Build and Push Docker image to JFrog Container Registry
