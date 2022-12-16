@@ -25,5 +25,5 @@ jobs:
  
     - name: Build and Push Docker image to Azure Container Registry
       run: |
-           docker build . -t https://registry-1.docker.io/dotnetdocker:${{ github.sha }}
-           docker push https://registry-1.docker.io/dotnetdocker:${{ github.sha }}
+           docker build . -t https://useast.jfrog.lexisnexisrisk.com/artifactory/innuk-dotnetdocker:${{ github.sha }}
+           docker push https://useast.jfrog.lexisnexisrisk.com/artifactory/innuk-dotnetdocker:${{ github.sha }}
