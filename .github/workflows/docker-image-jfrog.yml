@@ -18,12 +18,13 @@ jobs:
     - name: Login to JFrog Container Registry
       uses: azure/docker-login@v1
       with:
-          login-server: https://registry-1.docker.io/
-          username: usernamedocker
-          password: Welcome@123
+          login-server: https://useast.jfrog.lexisnexisrisk.com
+          username: manoharanv@b2b.regn.net
+          password: Digi"123
 
  
     - name: Build and Push Docker image to Azure Container Registry
       run: |
+        
            docker build . -t registry-1.docker.io/innuk-dotnetdocker:${{ github.sha }}
            docker push registry-1.docker.io/innuk-dotnetdocker:${{ github.sha }}
