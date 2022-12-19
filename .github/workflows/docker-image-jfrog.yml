@@ -14,7 +14,7 @@ jobs:
     
       - uses: actions/checkout@v2
       - name: Login to DockerHub Registry
-        run: docker login -u usernamedocker -p Digi@123 https://registry-1.docker.io/
+        run: docker login -u usernamedocker -p Digi@123 https://useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker/
       -
         name: Build and push 🐳
         id: docker_build
