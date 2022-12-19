@@ -14,18 +14,12 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v2
       -
-        name: Set up QEMU 🏗️
-        uses: docker/setup-qemu-action@v1
-      -
         name: Set up Docker Buildx 🐋
         uses: docker/setup-buildx-action@v1
-      -
-        name: Login to JFrog 🐸  
-        uses: docker/login-action@v2
-        with:
-          registry: https://registry-1.docker.io/
-          username: usernamedocker
-          password: JE2eMeKiKat3LK6Y467NuWWTwcy7tPaLFNbkpb9hq9GWKC1wQy
+    
+      - uses: actions/checkout@v2
+      - name: Login to DockerHub Registry
+        run: docker login -u usernamedocker -p JE2eMeKiKat3LK6Y467NuWWTwcy7tPaLFNbkpb9hq9GWKC1wQy useast.jfrog.lexisnexisrisk.com
       -
         name: Build and push 🐳
         id: docker_build
