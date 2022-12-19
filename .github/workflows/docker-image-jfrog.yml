@@ -14,7 +14,7 @@ jobs:
     
       - uses: actions/checkout@v2
       - name: Login to DockerHub Registry
-        run: docker login -u usernamedocker -p JE2eMeKiKat3LK6Y467NuWWTwcy7tPaLFNbkpb9hq9GWKC1wQy https://useast.jfrog.lexisnexisrisk.com/artifactory/innuk-dotnetdocker/
+        run: docker login https://useast.jfrog.lexisnexisrisk.com/artifactory/innuk-dotnetdocker/
       -
         name: Build and push 🐳
         id: docker_build
