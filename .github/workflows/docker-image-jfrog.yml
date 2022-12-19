@@ -11,11 +11,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-      
+    
       - uses: actions/checkout@v2
       - name: Login to DockerHub Registry
-        run: docker login -u usernamedocker -p Digi@123 https://useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker/
+        run: docker login -u usernamedocker -p Digi@123 https://useast.jfrog.lexisnexisrisk.com/ui/
       -
         name: Build and push 🐳
         id: docker_build
