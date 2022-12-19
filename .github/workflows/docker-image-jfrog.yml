@@ -11,15 +11,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2
-      -
-        name: Set up Docker Buildx 🐋
-        uses: docker/setup-buildx-action@v1
     
       - uses: actions/checkout@v2
       - name: Login to DockerHub Registry
-        run: docker login -u usernamedocker -p JE2eMeKiKat3LK6Y467NuWWTwcy7tPaLFNbkpb9hq9GWKC1wQy useast.jfrog.lexisnexisrisk.com
+        run: docker login -u usernamedocker -p JE2eMeKiKat3LK6Y467NuWWTwcy7tPaLFNbkpb9hq9GWKC1wQy https://useast.jfrog.lexisnexisrisk.com/artifactory/innuk-dotnetdocker/
       -
         name: Build and push 🐳
         id: docker_build
