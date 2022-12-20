@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - name: Build the Docker image
-      run: docker build . -t seast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker:${{ github.sha }}
+      run: docker build . -t useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker:${{ github.sha }}
   
     - name: publish to artifactory
       uses: advancedcsg-open/action-jfrog-cli@master
