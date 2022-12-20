@@ -16,8 +16,9 @@ jobs:
     - name: Login JFrog Docker
       run: docker login -u manoharanv@b2b.regn.net -p AKCp8nyYHF2oGeYep1SAYLYAaJHFNp8SLgZrL1ghD53c26nDG5Enb7UC1PqVHCB4fXz3FuNZd useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker/
     
-    - name: Build the Docker image
-      run: docker build . -t useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker/dotnetdocker:${{ github.sha }}
-  
-    - name: Push the Docker image to the registry
-      run: docker push useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker/dotnetdocker:${{ github.sha }}
+    - name: Build and push 🐳
+      id: docker_build
+      uses: docker/build-push-action@v2
+      with:
+          push: true
+          tags: useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker/imagedocker:latest
