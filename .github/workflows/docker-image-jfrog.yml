@@ -12,7 +12,7 @@ jobs:
 
     steps:
     
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v1
       - name: Login to JFrog Package Registry
         run:  docker login registry-1.docker.io --username usernamedocker --password Digi@123
       - name: Build the Docker image
