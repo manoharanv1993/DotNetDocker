@@ -12,13 +12,12 @@ jobs:
 
     steps:
     
-      - uses: actions/checkout@v1
-      - name: Login to DockerHub Registry
-        run: docker login -u usernamedocker -p Digi@123 https://useast.jfrog.lexisnexisrisk.com/ui
-      -
-        name: Build and push 🐳
-        id: docker_build
-        uses: docker/build-push-action@v2
-        with:
-          push: true
-          tags: https://useast.jfrog.lexisnexisrisk.com/artifactory/innuk-dotnetdocker/:latest
+      - uses: actions/checkout@v2
+      - name: Login to JFrog Package Registry
+        run:  docker login https://useast.jfrog.lexisnexisrisk.com/ui/ -u innuk-dotnetdocker --password-stdin
+      - name: Build the Docker image
+        run: docker build -t myimage:latest .
+      - name: Tag the Docker image
+        run: docker tag myimage:latest useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker/myimage:1.0
+      - name: Push the Docker image to the registry
+        run: docker push useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker/myimage:1.0
