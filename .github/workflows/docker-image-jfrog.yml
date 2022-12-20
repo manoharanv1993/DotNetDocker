@@ -12,7 +12,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    
+    - name: Set up Docker Buildx 🐋
+      uses: docker/setup-buildx-action@v1
+      
     - name: Login JFrog Docker
       run: docker login -u manoharanv@b2b.regn.net -p AKCp8nyYHF2oGeYep1SAYLYAaJHFNp8SLgZrL1ghD53c26nDG5Enb7UC1PqVHCB4fXz3FuNZd useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker/
     
@@ -21,4 +23,4 @@ jobs:
       uses: docker/build-push-action@v2
       with:
           push: true
-          tags: useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker/
+          tags: useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker/dotnetdocker:${{ github.sha }}
