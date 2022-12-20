@@ -23,6 +23,6 @@ jobs:
           login-server: useast.jfrog.lexisnexisrisk.com
           registry: https://registry-1.docker.io/
           username: manoharanv@b2b.regn.net
-          password: Digi@123
+          password: RGlnaUAxMjM=
     - name: Push the Docker image to the registry
       run: docker push useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker:${{ github.sha }}
