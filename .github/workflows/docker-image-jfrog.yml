@@ -14,13 +14,6 @@ jobs:
     - uses: actions/checkout@v3
     
   
-    - name: publish to artifactory
-      uses: advancedcsg-open/action-jfrog-cli@master
-      with:
-        url: 'https://registry-1.docker.io/'
-        credentials type: 'apikey'
-        apikey: AKCp8nyYHF2oGeYep1SAYLYAaJHFNp8SLgZrL1ghD53c26nDG5Enb7UC1PqVHCB4fXz3FuNZd
-        
     - name: Build the Docker image
       run: docker build . -t useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker:${{ github.sha }}
    
