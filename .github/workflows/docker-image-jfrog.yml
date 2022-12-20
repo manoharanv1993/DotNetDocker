@@ -21,4 +21,4 @@ jobs:
       uses: docker/build-push-action@v2
       with:
           push: true
-          tags: useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker/imagedocker:latest
+          tags: useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker/dotnetdocker:${{ github.sha }}
