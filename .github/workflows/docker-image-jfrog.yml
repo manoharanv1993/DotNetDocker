@@ -16,7 +16,7 @@ jobs:
     - name: Build the Docker image
       run: docker build . -t useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker:${{ github.sha }}
     - name: Login try
-      run: docker login -umanoharanv@b2b.regn.net -p Digi@123 useast.jfrog.lexisnexisrisk.com
+      run: docker login -umanoharanv@b2b.regn.net -pDigi@123 useast.jfrog.lexisnexisrisk.com
       
     - name: Login to JFrog
       uses: docker/login-action@v1
