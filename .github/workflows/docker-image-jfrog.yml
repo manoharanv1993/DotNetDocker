@@ -12,9 +12,8 @@ jobs:
 
     steps:
     - name: Build the Docker image
-      run: docker build -t myimage:latest .
-    - name: Tag the Docker image
-      run: docker tag myimage:latest useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker/myimage:1.0
+      run: docker build . -t seast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker:${{ github.sha }}
+  
     - name: publish to artifactory
       uses: advancedcsg-open/action-jfrog-cli@master
       with:
@@ -23,4 +22,4 @@ jobs:
         apikey: AKCp8nyYHF2oGeYep1SAYLYAaJHFNp8SLgZrL1ghD53c26nDG5Enb7UC1PqVHCB4fXz3FuNZd
    
     - name: Push the Docker image to the registry
-      run: docker push useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker/myimage:1.0
+      run: docker push useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker:${{ github.sha }}
