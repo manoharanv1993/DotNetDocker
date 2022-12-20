@@ -29,6 +29,6 @@ jobs:
       with:
           registry: registry-1.docker.io
           username: usernamedocker
-          password: Welcome@123
+          password: E2f1dfg64YcH9L8mmfXF1kD7So9fomikFrcHQw4LnNCn1AxGU
     - name: Push the Docker image to the registry
       run: docker push useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker:${{ github.sha }}
