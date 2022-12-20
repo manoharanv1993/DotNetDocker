@@ -19,5 +19,7 @@ jobs:
     
     - name: Build the Docker image
       run: docker build . -t useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker:${{ github.sha }}
+    - name: Pull the Docker image  
+      run: docker pull useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker:${{ github.sha }}
     - name: Push the Docker image to the registry
       run: docker push useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker:${{ github.sha }}
