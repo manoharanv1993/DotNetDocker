@@ -21,7 +21,6 @@ jobs:
       uses: docker/login-action@v1
       with:
           login-server: useast.jfrog.lexisnexisrisk.com
-          registry: https://registry-1.docker.io/
           username: manoharanv@b2b.regn.net
           password: RGlnaUAxMjM=
     - name: Push the Docker image to the registry
