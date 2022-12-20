@@ -15,7 +15,7 @@ jobs:
   
   
     - name: Login try
-      run: docker login -u manoharanv@b2b.regn.net -p AKCp8nyYHF2oGeYep1SAYLYAaJHFNp8SLgZrL1ghD53c26nDG5Enb7UC1PqVHCB4fXz3FuNZd useast.jfrog.lexisnexisrisk.com
+      run: docker login -u manoharanv@b2b.regn.net -p AKCp8nyYHF2oGeYep1SAYLYAaJHFNp8SLgZrL1ghD53c26nDG5Enb7UC1PqVHCB4fXz3FuNZd registry-1.docker.io
     
     - name: Build the Docker image
       run: docker build . -t registry-1.docker.io/innuk-dotnetdocker:dotnetdocker
