@@ -23,6 +23,12 @@ jobs:
         
     - name: Build the Docker image
       run: docker build . -t useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker:${{ github.sha }}
-  
+   
+    - name: Login to Jfrog Container Registry
+      uses: azure/docker-login@v1
+      with:
+          login-server: useast.jfrog.lexisnexisrisk.com
+          username: usernamedocker
+          password: JE2f1dfg64YcH9L8mmfXF1kD7So9fomikFrcHQw4LnNCn1AxGU
     - name: Push the Docker image to the registry
       run: docker push useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker:${{ github.sha }}
