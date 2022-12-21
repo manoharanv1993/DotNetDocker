@@ -26,9 +26,9 @@ jobs:
           password: AKCp8nyYHF2oGeYep1SAYLYAaJHFNp8SLgZrL1ghD53c26nDG5Enb7UC1PqVHCB4fXz3FuNZd
       -
         name: Build the Docker image
-        run: docker build . -t useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnet/docker:latest
+        run: docker build . -t docker:latest
       -
         name: Build and push 🐳   
         uses: jfrog/setup-jfrog-cli@v1
       - run: |
-           jfrog rt docker-push useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnet/docker:latest innuk-dotnet
+           jfrog rt docker-push docker:latest https://useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnet/
