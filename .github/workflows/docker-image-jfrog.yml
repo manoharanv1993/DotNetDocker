@@ -21,7 +21,7 @@ jobs:
         name: Login to JFrog 🐸  
         uses: docker/login-action@v1
         with:
-          registry: useast.jfrog.lexisnexisrisk.com
+          registry: useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker/
           username: manoharanv@b2b.regn.net
           password: AKCp8nyYHF2oGeYep1SAYLYAaJHFNp8SLgZrL1ghD53c26nDG5Enb7UC1PqVHCB4fXz3FuNZd
       -
