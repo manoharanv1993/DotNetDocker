@@ -31,4 +31,4 @@ jobs:
         name: Build and push 🐳   
         uses: jfrog/setup-jfrog-cli@v1
       - run: |
-           jfrog rt dp registry-1.docker.io/dotnetdocker:latest innuk-dotnetdocker --build-name=docker-build --build-number=1.0.0 --url=https://useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker/ -username=manoharanv@b2b.regn.net --password=AKCp8nyYHF2oGeYep1SAYLYAaJHFNp8SLgZrL1ghD53c26nDG5Enb7UC1PqVHCB4fXz3FuNZd
+           jfrog rt dp registry-1.docker.io/dotnetdocker:latest innuk-dotnetdocker --build-name=docker-build --build-number=1.0.0 --url=https://useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker/ --user=manoharanv@b2b.regn.net --apikey=AKCp8nyYHF2oGeYep1SAYLYAaJHFNp8SLgZrL1ghD53c26nDG5Enb7UC1PqVHCB4fXz3FuNZd
