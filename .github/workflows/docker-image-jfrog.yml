@@ -26,9 +26,9 @@ jobs:
           password: AKCp8nyYHF2oGeYep1SAYLYAaJHFNp8SLgZrL1ghD53c26nDG5Enb7UC1PqVHCB4fXz3FuNZd
       -
         name: Build the Docker image
-        run: docker build . -t useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker/dotnetdocker:${{ github.sha }}
+        run: docker build . -t useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker/${{ github.sha }}
       -
         name: Build and push 🐳   
         uses: jfrog/setup-jfrog-cli@v1
       - run: |
-           jfrog rt dp useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker/dotnetdocker:${{ github.sha }} innuk-dotnetdocker --build-name=docker-build --build-number=1.0.0 --url=https://useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker/dotnetdocker --user=manoharanv@b2b.regn.net --apikey=AKCp8nyYHF2oGeYep1SAYLYAaJHFNp8SLgZrL1ghD53c26nDG5Enb7UC1PqVHCB4fXz3FuNZd
+           jfrog rt dp useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker/${{ github.sha }} innuk-dotnetdocker --build-name=docker-build --build-number=1.0.0 --url=https://useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker/ --user=manoharanv@b2b.regn.net --apikey=AKCp8nyYHF2oGeYep1SAYLYAaJHFNp8SLgZrL1ghD53c26nDG5Enb7UC1PqVHCB4fXz3FuNZd
