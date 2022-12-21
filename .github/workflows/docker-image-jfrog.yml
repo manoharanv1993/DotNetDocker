@@ -31,4 +31,4 @@ jobs:
         name: Build and push 🐳   
         uses: jfrog/setup-jfrog-cli@v1
       - run: |
-           jfrog rt docker-push docker:latest https://useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnet/
+           jfrog rt docker-push docker:latest https://useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdocker/
