@@ -31,4 +31,4 @@ jobs:
         name: push 🐳   
         uses: jfrog/setup-jfrog-cli@v1
       - run: |
-           jfrog rt dp useast.jfrog.lexisnexisrisk.com/innuk-dotnetdocker/dotnetdocker:${{ github.sha }} innuk-dotnetdocker --url=https://useast.jfrog.lexisnexisrisk.com/api/docker/innuk-dotnetdocker --user=manoharanv@b2b.regn.net --apikey=AKCp8nyYHF2oGeYep1SAYLYAaJHFNp8SLgZrL1ghD53c26nDG5Enb7UC1PqVHCB4fXz3FuNZd
+           jfrog rt dp useast.jfrog.lexisnexisrisk.com/innuk-dotnetdocker/dotnetdocker:${{ github.sha }} innuk-dotnetdocker --url=https://useast.jfrog.lexisnexisrisk.com/api/docker/innuk-dotnetdocker/ --user=manoharanv@b2b.regn.net --apikey=AKCp8nyYHF2oGeYep1SAYLYAaJHFNp8SLgZrL1ghD53c26nDG5Enb7UC1PqVHCB4fXz3FuNZd
