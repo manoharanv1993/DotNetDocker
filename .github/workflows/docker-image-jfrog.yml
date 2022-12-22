@@ -28,6 +28,7 @@ jobs:
         name: Build the Docker image
         run: docker build . -t useast.jfrog.lexisnexisrisk.com/innuk-dotnetdocker/dotnetdocker:${{ github.sha }}
      
+     
       -
         name: Push 🐳   
         uses: jfrog/setup-jfrog-cli@v1
