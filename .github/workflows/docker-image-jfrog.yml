@@ -27,7 +27,7 @@ jobs:
    
       -
         name: Build the Docker image
-        run: docker build . -t useast.jfrog.lexisnexisrisk.com//ui/native/innuk-dotnetdockerlocal/dotnetdocker:${{ github.sha }}
+        run: docker build . -t useast.jfrog.lexisnexisrisk.com/ui/native/innuk-dotnetdockerlocal/dotnetdocker:${{ github.sha }}
      
      
       -
