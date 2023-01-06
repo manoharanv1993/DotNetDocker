@@ -14,7 +14,7 @@ $ docker build -t hello-world-dotnet .
 $ docker run hello-world-dotnet
 ```
 
-This will return
+This will return value
 
 ```text
 Hello World!
