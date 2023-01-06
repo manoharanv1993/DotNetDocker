@@ -6,7 +6,7 @@ namespace hello_world_dotnet
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello Velan Test Branch!");
+            Console.WriteLine("Hello Velan Dev Branch!");
         }
     }
 }
